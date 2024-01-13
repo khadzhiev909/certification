@@ -6,6 +6,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*Вылет до текущего момента времени (DepartureBeforeNowFilter):
+
+Исключить перелеты, где дата вылета раньше текущего момента времени.*/
+
 public class DepartureBeforeNowFilter implements FlightFilter{
     @Override
     public List<Flight> filter(List<Flight> flights) {

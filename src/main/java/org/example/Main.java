@@ -15,17 +15,17 @@ public class Main {
         // Первое правило: вылет до текущего момента времени
         FlightFilter departureBeforeNowFilter = new DepartureBeforeNowFilter();
         List<Flight> result1 = departureBeforeNowFilter.filter(flights);
-        System.out.println("Flights with departure before now: " + result1);
+        System.out.println("Flights with departure before now:(Рейсы с вылетом ранее:) " + result1);
 
         // Второе правило: сегменты с датой прилёта раньше даты вылета
         FlightFilter arrivalBeforeDepartureFilter = new ArrivalBeforeDepartureFilter();
         List<Flight> result2 = arrivalBeforeDepartureFilter.filter(flights);
-        System.out.println("Flights with segments arrival before departure: " + result2);
+        System.out.println("Flights with segments arrival before departure:(Рейсы с сегментами прибытия до вылета:) " + result2);
 
         // Третье правило: время на земле превышает два часа
         FlightFilter groundTimeExceedsTwoHoursFilter = new GroundTimeExceedsTwoHoursFilter();
         List<Flight> result3 = groundTimeExceedsTwoHoursFilter.filter(flights);
-        System.out.println("Flights with ground time exceeds two hours: " + result3);
+        System.out.println("Рейсы с наземным временем более двух часов: " + result3);
 
     }
 }

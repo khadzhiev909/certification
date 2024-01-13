@@ -7,6 +7,10 @@ import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*Перелеты с общим временем на земле более двух часов:
+
+Исключить перелеты, где общее время проведенное на земле между сегментами превышает два часа.
+*/
 public class GroundTimeExceedsTwoHoursFilter implements FlightFilter{
     @Override
     public List<Flight> filter(List<Flight> flights) {
@@ -15,7 +19,7 @@ public class GroundTimeExceedsTwoHoursFilter implements FlightFilter{
                 .collect(Collectors.toList());
     }
 
-    private long calculateGroundTime(Flight flight) {
+    public long calculateGroundTime(Flight flight) {
         List<FlightSegment> segments = flight.getSegments();
         long groundTime = 0;
         for (int i = 0; i < segments.size() - 1; i++) {
