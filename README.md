@@ -1,4 +1,4 @@
-Flight Filtering Module
+<h1>Flight Filtering Module</h1>
 This project implements a flight filtering module for processing and filtering flight itineraries based on various rules. The goal is to create a flexible module capable of handling dynamic rule sets for filtering large sets of flights. The code is organized within the com.gridnine.testing package.
 
 Project Structure
